@@ -42,4 +42,12 @@ const products = [
     onSale: false
   }
 ]
-module.exports = products;
+module.exports = {
+  getProducts() {
+    return products;
+  },
+  getProductIndex(index) {
+    console.log(index);
+    return products[index];
+  }
+}

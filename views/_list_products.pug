@@ -1,0 +1,18 @@
+extends ../views/_common_layout
+block content
+	fieldset
+		legend Product Specifics
+		div
+			ul
+				each item, indexs in entries
+					li 
+						label #{indexs}: #{item}
+
+	fieldset
+		legend List of Actions
+		div
+			h3
+				a(href='/products/add') Add New Product
+		div
+			h3
+				a(href=`/products/delete/${index}`) Delete Product

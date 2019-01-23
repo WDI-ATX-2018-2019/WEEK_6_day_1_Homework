@@ -1,0 +1,18 @@
+extends ../views/_common_layout
+block content
+	fieldset
+		legend List of Customers
+		div
+			ul
+				each item, index in customers
+					li 
+						a(href=`/customers/${index}`) #{item.name}
+
+	fieldset
+		legend List of Actions
+		div
+			h3
+				a(href='/customers/add') Add New Customer
+		div
+			h3
+				a(href='/customers/delete') Delete Customer

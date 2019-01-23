@@ -6,7 +6,7 @@ const customers = [
     likes: 'makeup'
   },
   {
-    name: 'Christopher',
+    name: 'Chris',
     age: 21,
     sex: 'Male',
     likes: 'video games'
@@ -42,4 +42,14 @@ const customers = [
     likes: 'food'
   }
 ]
-module.exports = customers;
+
+module.exports = {
+  getCustomers() {
+    cow = customers.toString()
+    return customers;
+  },
+  getCustomerIndex(index) {
+    console.log(index);
+    return customers[index];
+  }
+}
