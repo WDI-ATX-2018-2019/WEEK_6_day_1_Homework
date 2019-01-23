@@ -1,0 +1,16 @@
+extends ../views/_common_layout
+block content
+	fieldset
+		legend Customer Specifics
+		div
+			ul
+				each item, indexs in entries
+					li 
+						label #{indexs}: #{item}
+
+	//form(action="/pokemon/delete/delete/0" method="post")
+		//label(for="pokemon-name")
+		//input#pokemon-name(name="pokemon-name" type="text")
+		//button(type="submit") Delete Pokemon
+	button(onclick=`horse(${index})` type='button') Delete Customer
+	//<button onclick="myFunction()">Click me</button>

@@ -8,6 +8,9 @@ app.use(express.static(path.join(__dirname,'public')));
 const customers_router = require('./customers/router.js')
 const products_router = require('./products/router.js')
 
+let bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
 
 let router = express.Router();
 

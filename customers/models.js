@@ -49,7 +49,12 @@ module.exports = {
     return customers;
   },
   getCustomerIndex(index) {
-    console.log(index);
     return customers[index];
+  },
+  addCustomer(obj) {
+    customers.push(obj);
+  },
+  deleteCustomer(index) {
+    customers.splice(index, 1);    
   }
 }

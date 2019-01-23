@@ -12,7 +12,6 @@ block content
 		legend List of Actions
 		div
 			h3
-				a(href='/products/add') Add New Product
+				a(href='/products/add/products') Add New Product
 		div
-			h3
-				a(href=`/products/delete/${index}`) Delete Product
+			button(onclick=`deleteProduct(${index})` type='button') Delete Product

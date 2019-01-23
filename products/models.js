@@ -47,7 +47,12 @@ module.exports = {
     return products;
   },
   getProductIndex(index) {
-    console.log(index);
     return products[index];
+  },
+  addProduct(obj) {
+    products.push(obj);
+  },
+  deleteProducts(index) {
+    products.splice(index, 1);    
   }
 }
