@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%=customers.title%></title>
+		<!-- <link rel="stylesheet" type="text/css" href="../style.css" /> -->
+	</head>
+	<body>
+		<%- include('./partials/list.ejs', {customers}) -%>
+		<a href="/customers/new">Create A New Customer</a>
+	</body>
+</html>
