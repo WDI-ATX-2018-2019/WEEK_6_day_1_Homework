@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><%=customers.title%></title>
+		<title><%=title%></title>
 		<!-- <link rel="stylesheet" type="text/css" href="../style.css" /> -->
 	</head>
 	<body>
-		<%- include('./partials/list.ejs', {customers}) -%>
-		<a href="/customers/new">Create A New Customer</a>
+		<%console.log(items)%>
+		<%- include('./partials/list.ejs', {items}) -%>
+		<a href="/<%=title.toLowerCase()%>/new">Create A New <%=title.substring(0, title.length - 1)%></a>
+		<%- include('./partials/routing.ejs') -%>
 	</body>
 </html>

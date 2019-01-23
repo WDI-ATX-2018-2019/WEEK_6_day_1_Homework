@@ -38,7 +38,6 @@ module.exports = {
 		customers.splice(id, 1);
 	},
 	editCustomer(id, newCustomer) {
-		console.log(id);
 		customers[id] = newCustomer;
 	},
 	createCustomer(newCustomer) {

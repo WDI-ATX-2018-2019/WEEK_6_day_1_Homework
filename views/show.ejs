@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%=customer.name%></title>
+	<title><%=item.name%></title>
 	<!-- <link rel="stylesheet" type="text/css" href="../style.css" /> -->
 </head>
 <body>
-		<p><%=customer.name%></p>
-		<p><%=customer.email%></p>
-		<p><%=customer.phoneNumber%></p>
-		<p><%=customer.address%></p>
+	<%for(let attribute in item){%>
+		<p><%=attribute%>: <%=item[attribute]%></p>
+		<%}%>
+		<%- include('./partials/routing.ejs') -%>
 </body>
 </html>

@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/customers', customersRouter);
-//app.use('/products', productsRouter);
+app.use('/products', productsRouter);
 
 app.listen(PORT, function() {
 	console.log('Server running on port: ' + PORT);

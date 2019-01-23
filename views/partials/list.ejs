@@ -1,8 +1,9 @@
-<ul class=<%=customers.title%>>
+<ul class=<%=title%>>
 	<%let i=0%>
-	<% customers.map((customer)=>{ console.log(i)%>
-		<li><a href='/customers/<%=i%>'><%=customer.name%></a>
-			<a href="/customers/<%=i%>/edit">Edit</a>
+	<%let smallTitle = title.toLowerCase()%>
+	<% items.map((item)=>{ %>
+		<li><a href='/<%=smallTitle%>/<%=i%>'><%=item.name%></a>
+			<a href="/<%=smallTitle%>/<%=i%>/edit">Edit</a>
 		</li>
 	<% i++ }); %>
 </ul>

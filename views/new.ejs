@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Create A New Customer</title>
+	<title>Create A New <%=title.substring(0, title.length - 1)%></title>
 	<!-- <link rel="stylesheet" type="text/css" href="../style.css" /> -->
 </head>
 <body>
-	<%- include('./partials/form.ejs') -%>
+	<%- include('./partials/form.ejs', {formTitles}) -%>
 </body>
 </html>
