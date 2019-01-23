@@ -19,7 +19,6 @@ router.get('/new', (request, response) => {
 });
 router.get('/:id/edit', (request, response) => {
 	newCustomer = request.params.id;
-	console.log(newCustomer);
 	response.render('../views/edit.ejs', {
 		action: `/customers/${newCustomer}`,
 		formTitles: ['Name', 'Email', 'Phone Number', 'Address']

@@ -29,7 +29,6 @@ let products = [
 module.exports = {
 	title,
 	getProducts() {
-		console.log('Hello');
 		return products;
 	},
 	getProduct(id) {

@@ -1,0 +1,4 @@
+::1 - - [23/Jan/2019:17:12:58 +0000] "GET /products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [23/Jan/2019:17:13:04 +0000] "GET /products/1 HTTP/1.1" 304 - "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [23/Jan/2019:17:15:20 +0000] "GET /customers HTTP/1.1" 200 680 "http://localhost:3000/products/1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+::1 - - [23/Jan/2019:17:15:21 +0000] "GET /customers/0 HTTP/1.1" 304 - "http://localhost:3000/customers" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
