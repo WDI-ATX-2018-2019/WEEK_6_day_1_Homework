@@ -3,7 +3,7 @@
 	<%let smallTitle = title.toLowerCase()%>
 	<% items.map((item)=>{ %>
 		<li><a href='/<%=smallTitle%>/<%=i%>'><%=item.name%></a>
-			<a href="/<%=smallTitle%>/<%=i%>/edit">Edit</a>
+			<a href="/<%=smallTitle%>/<%=i%>/edit" class="link">Edit</a>
 		</li>
 	<% i++ }); %>
 </ul>
