@@ -1,9 +1,25 @@
+
+//require files.  Use npm install to get these!
 const express = require('express');
+const morgan = require('morgan');
+const compression = require('compression')
 const app = express();
-let PORT = 3000;
-app.set('view engine', 'pug');
 const path = require('path');
+
+app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname,'public')));
+
+//Global variable for port. Rather use a define like C!!!
+let PORT = 3000;
+
+// setup the logger.  Will make a file in the current directory
+let fs = require('fs');
+let stream = fs.createWriteStream(path.join(__dirname, "middleware.log"), {'flag': 'a'});  //open, append the file.
+app.use(morgan('combined', { stream: stream }));
+
+//setup compression.  There is a default constructor but I am not modifing the default
+//this will say Content-Encoding: gzip in the raw header.
+app.use(compression())
 
 const customers_router = require('./customers/router.js')
 const products_router = require('./products/router.js')

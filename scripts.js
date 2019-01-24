@@ -3,14 +3,32 @@ function deleteCustomer(id) {
 	request.open('DELETE', '/customers/delete/' + id, /* async = */ false);
 	request.send();
 	request.done(window.location.href="/customers");
-	//window.location.href="/pokemon"; 
-	//console.log('response head: ' + request.responseText.substring(0, 15) + '...');
-}
+	
+};
+
+//The old AJAX way
 function deleteProduct(id) {
 	var request = new XMLHttpRequest();
 	request.open('DELETE', '/products/delete/' + id, /* async = */ false);
 	request.send();
-	request.done(window.location.href="/productss");
-	//window.location.href="/pokemon"; 
-	//console.log('response head: ' + request.responseText.substring(0, 15) + '...');
-}
+	request.done(window.location.href="/products");
+};
+
+//This is the new and improved fetch with ES7 async (which is better than promises!)
+const deleteProduct2 = (async (id) => {
+	const response = await (fetch('/products/delete/' + id, { method: 'delete'}));
+	const data = await response.text();
+	console.log(data);   //data is empty on an res.end()
+	if (data === "DONE") {
+		window.location.href="/products";
+	}
+}); 
+
+const deleteCustomer2 = (async (id) => {
+	const response = await (fetch('/customers/delete/' + id, { method: 'delete'}));
+	const data = await response.text();
+	console.log(data);   //data is empty on an res.end()
+	if (data === "DONE") {
+		window.location.href="/customers";
+	}
+}); 

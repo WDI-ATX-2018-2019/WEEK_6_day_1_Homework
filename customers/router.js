@@ -32,8 +32,7 @@ router.post('/add/customers', (req,res) => {
 
 router.delete('/delete/:id', (req,res) => {
 	model.deleteCustomer(req.params.id);
-	res.redirect('/customers');  //redirect will not work when using AJAX to make the delete request.
-	res.end();
+	res.send("DONE");
 })
 
 

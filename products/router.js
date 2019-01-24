@@ -34,9 +34,8 @@ router.post('/add/products', (req,res) => {
 })
 
 router.delete('/delete/:id', (req,res) => {
-	model.deleteProduct(req.params.id);
-	res.redirect('/products');  //redirect will not work when using AJAX to make the delete request.
-	res.end();
+	model.deleteProducts(req.params.id);
+	res.send("DONE");
 })
 
 module.exports = router;
