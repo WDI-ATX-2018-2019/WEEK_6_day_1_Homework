@@ -1,0 +1,18 @@
+extends ../views/_common_layout
+block content
+	h2 Add New Customer Page
+			
+	form(action="/products/add/products" method="POST")
+		div
+			label(for="product-name") Add Name
+			input#product-name(name="product-name" type="text")
+		div
+			label(for="product-cost")  Add Cost 
+			input#product-cost(name="product-cost" type="text")
+		div
+			label(for="product-color")  Add Color 
+			input#product-color(name="product-color" type="text")
+		div
+			label(for="product-onsale")  Add On Sale (True or False) 
+			input#product-onsale(name="product-onsale" type="text")
+		button(type="submit") Add New Product

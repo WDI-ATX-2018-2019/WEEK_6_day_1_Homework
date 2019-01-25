@@ -1,0 +1,18 @@
+extends ../views/_common_layout
+block content
+	h2 Update Product Page
+			
+	
+	div
+		label(for="product-name") Update Name
+		input#product-name(name="product-name" type="text")
+	div
+		label(for="product-cost")  Update Cost 
+		input#product-cost(name="product-cost" type="text")
+	div
+		label(for="product-color")  Update Color 
+		input#product-color(name="product-color" type="text")
+	div
+		label(for="product-onsale")  Update On Sale (True or False) 
+		input#product-onsale(name="product-onsale" type="text")
+	button(onclick=`updateProduct(${index})` type='button') Update Product

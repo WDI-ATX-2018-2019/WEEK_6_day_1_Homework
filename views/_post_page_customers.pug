@@ -1,0 +1,22 @@
+extends ../views/_common_layout
+block content
+	h2 Add New Customer Page
+			
+	form(action="/customers/add/customers" method="POST")
+		div
+			label(for="customer-name") Add Name
+			input#customer-name(name="customer-name" type="text")
+		div
+			label(for="customer-age")  Add Age 
+			input#customer-age(name="customer-age" type="text")
+		div
+			label(for="customer-sex")  Add Sex 
+			input#customer-sex(name="customer-sex" type="text")
+		div
+			label(for="customer-likes")  Add Like 
+			input#customer-likes(name="customer-likes" type="text")
+		button(type="submit") Add New Customer
+
+
+
+		//input(type="hidden" name="color" value=color)
