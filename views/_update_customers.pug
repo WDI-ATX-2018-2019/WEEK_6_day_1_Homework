@@ -1,0 +1,19 @@
+extends ../views/_common_layout
+block content
+	h2 Update Customer Page
+			
+	
+	div
+		label(for="customer-name") Update Name
+		input#customer-name(name="customer-name" type="text")
+	div
+		label(for="customer-age")  Update Age 
+		input#customer-age(name="customer-age" type="text")
+	div
+		label(for="customer-sex")  Update Sex 
+		input#customer-sex(name="customer-sex" type="text")
+	div
+		label(for="customer-likes")  Update Like 
+		input#customer-likes(name="customer-likes" type="text")
+	button(onclick=`updateCustomer(${index})` type='button') Update Customer
+

@@ -53,7 +53,7 @@ fieldset {
 legend {
 	margin: 0 auto;
 }
-form, h2 {
+form, h2, label {
 	color: blue;
 }
 label {

@@ -56,5 +56,12 @@ module.exports = {
   },
   deleteCustomer(index) {
     customers.splice(index, 1);    
+  },
+  updateCustomer(obj) {
+    let index = obj.index;
+    customers[index].name = obj.name;
+    customers[index].age = obj.age;
+    customers[index].sex = obj.sex;
+    customers[index].likes = obj.likes;
   }
 }

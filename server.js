@@ -1,4 +1,6 @@
 
+
+
 //require files.  Use npm install to get these!
 const express = require('express');
 const morgan = require('morgan');
@@ -6,11 +8,20 @@ const compression = require('compression')
 const app = express();
 const path = require('path');
 
+//allow us to define the port on the command line!!!
+let PORT = 3000;
+if ((process.argv[2]) !== "undefined") {
+	let portNum = parseInt(process.argv[2])
+	if ( typeof(portNum) === "number" && portNum > 1000) {
+		PORT = process.argv[2];
+	}
+}
+
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname,'public')));
 
 //Global variable for port. Rather use a define like C!!!
-let PORT = 3000;
+
 
 // setup the logger.  Will make a file in the current directory
 let fs = require('fs');
@@ -34,7 +45,7 @@ app.use("/products",products_router);
 app.use("/customers",customers_router);
 
 app.get("/", function(req,res) {
-	res.send("<h1>My pages works Pug Style</h1><div><a href='customers/'>Link to Customers</div><div><a href='products/'>Link to Products</div>");
+	res.render("_main_page");
 });
 
 // LISTENER

@@ -17,8 +17,13 @@ router.get("/:index", function (request, response) {
 });
 
 router.get("/delete/:id", function(request, response) {
-	let customerIndex = model.getCustomerIndex(request.params.index);
-	response.render('_delete_page_customers', { entries: customerIndex, index: request.params.index })
+	let customerIndex = model.getCustomerIndex(request.params.id);
+	response.render('_delete_page_customers', { entries: customerIndex, index: request.params.id })
+});
+
+router.get("/update/:id", function(request, response) {
+	let customerIndex = model.getCustomerIndex(request.params.id);
+	response.render('_update_customers', { entries: customerIndex, index: request.params.id })
 });
 
 router.post('/add/customers', (req,res) => {
@@ -28,6 +33,16 @@ router.post('/add/customers', (req,res) => {
 	let newCustomerLikes = req.body['customer-likes'];
 	model.addCustomer( {name: newCustomerName, age: newCustomerAge, sex: newCustomerSex, likes: newCustomerLikes });    
 	res.redirect('/customers');
+})
+
+router.put('/update/:id', (req,res) => {
+	let newCustomerName = req.body['customer-name'];
+	let newCustomerAge = req.body['customer-age'];
+	let newCustomerSex = req.body['customer-sex'];
+	let newCustomerLikes = req.body['customer-likes'];
+	let updateIndex = req.body['customer-index'];
+	model.updateCustomer( {name: newCustomerName, age: newCustomerAge, sex: newCustomerSex, likes: newCustomerLikes, index: updateIndex });    
+	res.send("DONE");
 })
 
 router.delete('/delete/:id', (req,res) => {

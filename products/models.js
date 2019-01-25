@@ -54,5 +54,12 @@ module.exports = {
   },
   deleteProducts(index) {
     products.splice(index, 1);    
-  }
+  },
+  updateProduct(obj) {
+    let index = obj.index;
+    products[index].productName = obj.productName;
+    products[index].cost = obj.cost;
+    products[index].color = obj.color;
+    products[index].onSale = obj.onSale;
+  }  
 }

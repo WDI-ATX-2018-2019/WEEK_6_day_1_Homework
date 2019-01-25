@@ -32,3 +32,57 @@ const deleteCustomer2 = (async (id) => {
 		window.location.href="/customers";
 	}
 }); 
+
+const updateCustomer = (async (id) => {
+	let string = "";
+	$( "input" ).filter(function (index) {
+		string = string + this.name + "=" + this.value + "&";
+	});
+
+	string = string + "customer-index=" + id;
+	
+	const options = {
+  		method: 'put',
+  		headers: {
+    		'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+  		},
+  		body: string
+	}
+	
+	const response = await (fetch('/customers/update/' + id, options ));
+	const data = await response.text();
+
+	if (data === "DONE") {
+		window.location.href=`/customers/${id}`;
+	}
+}); 
+
+const updateProduct = (async (id) => {
+	console.log("3333333333333333")
+
+
+	let string = "";
+	$( "input" ).filter(function (index) {
+		string = string + this.name + "=" + this.value + "&";
+	});
+
+	string = string + "product-index=" + id;
+	console.log(string)
+
+
+	const options = {
+  		method: 'put',
+  		headers: {
+    		'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+  		},
+  		body: string
+	}
+	console.log(id)
+
+	const response = await (fetch('/products/update/' + id, options ));
+	const data = await response.text();
+	console.log(data)
+	if (data === "DONE") {
+		window.location.href=`/products/${id}`;
+	}
+}); 
