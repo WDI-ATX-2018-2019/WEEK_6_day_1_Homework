@@ -1,0 +1,25 @@
+{
+  "name": "week_6_day_1_homework",
+  "version": "1.0.0",
+  "description": "Homework assignment creating a REST using Node and Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwerbin95/WEEK_6_day_1_Homework.git"
+  },
+  "author": "Jacob Werbin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwerbin95/WEEK_6_day_1_Homework/issues"
+  },
+  "homepage": "https://github.com/jwerbin95/WEEK_6_day_1_Homework#readme",
+  "dependencies": {
+    "compression": "^1.7.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}

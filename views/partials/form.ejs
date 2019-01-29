@@ -1,0 +1,21 @@
+
+<form class="newCustomer" action="<%=action%>" method="POST">
+	<div>
+		<label for="name"><%=formTitles[0]%>:</label>
+		<input type="text" id="name" name="name">
+	</div>
+	<div>
+		<label for="email"><%=formTitles[1]%>:</label>
+		<input type="text" id="email" name="email">
+	</div>
+	<div>
+		<label for="phoneNumber"><%=formTitles[2]%>:</label>
+		<input type="text" id="phoneNumber" name="phoneNumber">
+	</div>
+	<div>
+		<label for="address"><%=formTitles[3]%>:</label>
+		<input type="text" id="address" name="address">
+	</div>
+	<button type="submit">Save</button>
+</form>
+<a href="/customers" class="link">Home</a>

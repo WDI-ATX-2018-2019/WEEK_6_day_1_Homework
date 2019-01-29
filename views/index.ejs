@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%=title%></title>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/>
+	</head>
+	<body>
+		<%- include('./partials/list.ejs', {items}) -%>
+		<a href="/<%=title.toLowerCase()%>/new" class="link">Create A New <%=title.substring(0, title.length - 1)%></a>
+		<%- include('./partials/routing.ejs') -%>
+	</body>
+</html>
