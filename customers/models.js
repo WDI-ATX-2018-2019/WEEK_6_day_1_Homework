@@ -1,19 +1,33 @@
 const customers = require('./data')
 
 
-let WhoAmI = function(index) {
-	return console.log(customers.name)
+//get 
+
+const CustomerFunction = {
+
+    getCustomer(index) {
+        return customers[index]
+    },
+
+    //put 
+
+    addCustomer(newName, newAge, newHeight, newWeight) {
+        customers.push({
+            name: newName,
+            age: newAge,
+            height: newHeight,
+            weight: newWeight
+        })
+        return customers
+    },
+
+    // post 
+
+    changeAge(index, newAge) {
+        customers[index].age = newAge
+        return customers
+    }
 }
 
 
-WhoAmI(1)
-
-
-
-
-
-
-
-
-
-
+module.exports = CustomerFunction
