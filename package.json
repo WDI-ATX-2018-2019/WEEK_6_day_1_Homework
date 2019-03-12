@@ -1,0 +1,19 @@
+{
+  "name": "week-6-day-1-hw",
+  "version": "1.0.0",
+  "description": "hw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julsatx/WEEK_6_day_1_Homework.git"
+  },
+  "author": "julius camarillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julsatx/WEEK_6_day_1_Homework/issues"
+  },
+  "homepage": "https://github.com/julsatx/WEEK_6_day_1_Homework#readme"
+}
